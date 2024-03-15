@@ -5,18 +5,18 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int pilihan;
+        int input;
 
         do {
-            System.out.println("Pilih jenis pengguna:");
+            System.out.println("Pilih Menu pengguna:");
             System.out.println("1. Admin");
             System.out.println("2. Mahasiswa");
             System.out.println("3. Keluar");
             System.out.print("Pilihan Anda: ");
-            pilihan = scanner.nextInt();
+            input = scanner.nextInt();
             scanner.nextLine();
 
-            switch (pilihan) {
+            switch (input) {
                 case 1:
                     Admin admin = new Admin(scanner);
                     admin.menuAdmin();
@@ -32,7 +32,7 @@ public class Main {
                     System.out.println("Pilihan tidak valid.");
                     break;
             }
-        } while (pilihan != 3);
+        } while (input != 3);
 
         scanner.close();
     }
@@ -211,15 +211,15 @@ class Admin {
 
         // Menambahkan beberapa mahasiswa contoh
         Mahasiswa mahasiswa1 = new Mahasiswa(scanner);
-        mahasiswa1.setNama("John Doe");
-        mahasiswa1.setNim("123456789012345");
-        mahasiswa1.setFakultas("Teknik");
-        mahasiswa1.setProgramStudi("Informatika");
+        mahasiswa1.setNama("Adinda");
+        mahasiswa1.setNim("001122334455667");
+        mahasiswa1.setFakultas("Ekonomi");
+        mahasiswa1.setProgramStudi("Manajemen");
         daftarMahasiswa.add(mahasiswa1);
 
         Mahasiswa mahasiswa2 = new Mahasiswa(scanner);
-        mahasiswa2.setNama("Jane Doe");
-        mahasiswa2.setNim("987654321098765");
+        mahasiswa2.setNama("Okta");
+        mahasiswa2.setNim("889910122334456");
         mahasiswa2.setFakultas("Ilmu Komunikasi");
         mahasiswa2.setProgramStudi("Jurnalistik");
         daftarMahasiswa.add(mahasiswa2);
